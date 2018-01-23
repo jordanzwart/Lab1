@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+
+public class Lab1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		double perimeter;
+		double area;
+		String answer;
+		double volume;
+		
+		
+		System.out.println("Figure out the perimeter and area of your room");
+		System.out.println("Please enter Length of room: ");
+		double length = scan.nextDouble();
+		
+		System.out.println("Please enter Width of room: ");
+		double width = scan.nextDouble();
+		
+		perimeter = (2 * (length + width));
+		area = (width * length);
+		
+		System.out.println("The Perimeter of your room is " + perimeter);
+		System.out.println("The Area of your room is " + area);
+
+		System.out.println("Continue for extra credit?! Type, Y or N");
+		answer = scan.next();
+		
+		if (answer.equals("Y")|| answer.equals("y")){
+			System.out.println("Figure out the volume of your room");
+			System.out.println("Please enter the height of your room:");
+			double heigth = scan.nextDouble();
+			volume = length * width * heigth;
+			System.out.println(volume);
+		}
+		
+		else {
+			return;
+		}
+	}
