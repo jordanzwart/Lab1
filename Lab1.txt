@@ -1,3 +1,4 @@
+// i did the wrong code from this morning you will see my updated version below. My apologies.
 import java.util.Scanner;
 
 
@@ -39,3 +40,61 @@ public class Lab1 {
 			return;
 		}
 	}
+
+// After i figured out i did the wrong code
+import java.util.Scanner;
+
+
+public class Lab1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		double perimeter;
+		double area;
+		double volume;
+		double width;
+		double length;
+		double heigth;
+		char userName;
+		String answer; 
+		
+		System.out.println("Figure out the perimeter and area of your room");
+		System.out.println("Please enter Length of room: ");
+		length = scan.nextDouble();
+		
+		System.out.println("Please enter Width of room: ");
+		width = scan.nextDouble();
+		
+		System.out.println("Please enter the height of your room:");
+		heigth = scan.nextDouble();
+		
+		userName = 'y';
+		while (userName == 'y'){
+			perimeter = (2 * (length + width));
+			System.out.println("The Perimeter of your room is " + perimeter);
+			area = (width * length);
+			System.out.println("The Area of your room is " + area);
+			volume = length * width * heigth;
+			System.out.println("The Volume of your room is " + area);
+			System.out.println("Continue? please enter y/n");
+			answer = scan.next();
+			
+			if (answer.equals("y") || answer.equals("Y")) {
+				System.out.println("Figure out the perimeter and area of your room");
+				System.out.println("Please enter Length of room: ");
+				length = scan.nextDouble();
+				
+				System.out.println("Please enter Width of room: ");
+				width = scan.nextDouble();
+				
+				System.out.println("Please enter the height of your room:");
+				heigth = scan.nextDouble();
+			}
+			
+			else {
+				System.out.println("Goodbye");
+			}
+			return;
+			
+		}
+		
